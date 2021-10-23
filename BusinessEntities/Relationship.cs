@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
+    /// <summary>
+    /// Represents a relationship between two Work Items.
+    /// </summary>
     public class Relationship
     {
         public enum EType
@@ -22,11 +25,12 @@ namespace BusinessEntities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required]
+        public int MainItemId { get; set; }
         public WorkItem MainItem { get; set; }
 
-        [Required]
+        public int RelatedItemId { get; set; }
         public WorkItem RelatedItem { get; set; }
+
 
         [Required]
         public EType Type { get; set; }

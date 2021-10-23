@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
+    /// <summary>
+    /// Contains a list of WorkItems for a team.
+    /// </summary>
     public class Backlog
     {
+        [ForeignKey("Team")]
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -20,6 +25,6 @@ namespace BusinessEntities
 
         public Team Team { get; set; }
 
-        public List<WorkItem> WorkItems { get; set; }
+        public virtual ICollection<WorkItem> WorkItems { get; set; }
     }
 }

@@ -43,7 +43,7 @@ namespace BusinessEntities
         [Required]
         public EType ItemType { get; set; }
 
-        public Person Assignment { get; set; }
+        public Position Assignment { get; set; }
 
         [Required]
         public DateTime CreationDate { get; set; }
@@ -57,5 +57,11 @@ namespace BusinessEntities
         public DateTime SprintStart { get; set; }
 
         public DateTime SprintEnd { get; set; }
+
+        public Backlog Backlog { get; set; }
+
+        public virtual ICollection<Relationship> RelationshipsSource { get; set; }
+
+        public virtual ICollection<Relationship> RelationshipsDestination { get; set; }
     }
 }

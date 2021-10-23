@@ -19,5 +19,9 @@ namespace BusinessEntities
         public string Name { get; set; }
 
         public List<Position> Positions { get; set; }
+
+        public virtual Backlog Backlog { get; set; }
+
+        public virtual ICollection<Sprint> Sprints { get; set; }
     }
 }

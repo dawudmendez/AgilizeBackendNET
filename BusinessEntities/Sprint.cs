@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
+    /// <summary>
+    /// It's a period of time were work is produced.
+    /// Associated with a team.
+    /// </summary>
     public class Sprint
     {
         public enum EType

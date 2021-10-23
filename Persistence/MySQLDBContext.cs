@@ -26,6 +26,14 @@ namespace Persistence
         public DbSet<User> Users { get; set; }
         public DbSet<WorkItem> WorkItems { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<Relationship>().HasOne(re => re.MainItem).WithMany(wi => wi.RelationshipsSource).HasForeignKey(re => re.MainItemId);
+            modelBuilder.Entity<Relationship>().HasOne(re => re.RelatedItem).WithMany(wi => wi.RelationshipsDestination).HasForeignKey(re => re.RelatedItemId);
+
+        }
+
     }
 
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<MySQLDBContext>

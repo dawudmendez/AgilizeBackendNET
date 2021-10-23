@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
+    /// <summary>
+    /// Stores a person.
+    /// </summary>
     public class Person
     {
         [Key]
@@ -21,5 +24,9 @@ namespace BusinessEntities
         [Required]
         [MaxLength(100)]
         public string Email { get; set; }
+
+        public virtual ICollection<Position> Positions { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

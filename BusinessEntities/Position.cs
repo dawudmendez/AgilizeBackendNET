@@ -10,6 +10,10 @@ namespace BusinessEntities
 {
     public class Position
     {
+        /// <summary>
+        /// It represents a specific position that can be only inside a team.
+        /// It is the matching between a person and a role for a specific team.
+        /// </summary>
         public enum ERole
         {
             SM,
@@ -32,5 +36,9 @@ namespace BusinessEntities
 
         [Required]
         public Person Person { get; set; }
+
+        public virtual ICollection<WorkItem> WorkItems { get; set; }
+
+        public virtual Team Team { get; set; }
     }
 }
