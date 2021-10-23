@@ -1,0 +1,15 @@
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\BusinessEntities.deps.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\BusinessEntities.runtimeconfig.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\BusinessEntities.runtimeconfig.dev.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\BusinessEntities.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\ref\BusinessEntities.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\bin\Debug\net5.0\BusinessEntities.pdb
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csproj.AssemblyReference.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfoInputs.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.AssemblyInfo.cs
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\ref\BusinessEntities.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.pdb
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\BusinessEntities\obj\Debug\net5.0\BusinessEntities.genruntimeconfig.cache

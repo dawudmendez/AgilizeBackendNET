@@ -1,0 +1,17 @@
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.csproj.AssemblyReference.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfoInputs.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfo.cs
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.csproj.CoreCompileInputs.cache
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\Persistence.deps.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\Persistence.runtimeconfig.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\Persistence.runtimeconfig.dev.json
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\Persistence.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\ref\Persistence.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\Persistence.pdb
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\BusinessEntities.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\bin\Debug\net5.0\BusinessEntities.pdb
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\ref\Persistence.dll
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.pdb
+D:\Desarrollo\Github\Agilize\Backend\AgilizeBackend\Persistence\obj\Debug\net5.0\Persistence.genruntimeconfig.cache
