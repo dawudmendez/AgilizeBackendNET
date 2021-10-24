@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessEntities
+namespace Model.Entities
 {
     /// <summary>
     /// Represents a relationship between two Work Items.

@@ -3,9 +3,10 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Persistence;
+using Model;
+using Model.Context;
 
-namespace Persistence.Migrations
+namespace Model.Migrations
 {
     [DbContext(typeof(MySQLDBContext))]
     partial class MySQLDBContextModelSnapshot : ModelSnapshot
@@ -17,7 +18,7 @@ namespace Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("BusinessEntities.Backlog", b =>
+            modelBuilder.Entity("Model.Entities.Backlog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +34,7 @@ namespace Persistence.Migrations
                     b.ToTable("Backlogs");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Person", b =>
+            modelBuilder.Entity("Model.Entities.Person", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -54,7 +55,7 @@ namespace Persistence.Migrations
                     b.ToTable("Persons");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Position", b =>
+            modelBuilder.Entity("Model.Entities.Position", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -83,7 +84,7 @@ namespace Persistence.Migrations
                     b.ToTable("Positions");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Relationship", b =>
+            modelBuilder.Entity("Model.Entities.Relationship", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,7 +111,7 @@ namespace Persistence.Migrations
                     b.ToTable("Relationships");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Sprint", b =>
+            modelBuilder.Entity("Model.Entities.Sprint", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -149,7 +150,7 @@ namespace Persistence.Migrations
                     b.ToTable("Sprints");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Team", b =>
+            modelBuilder.Entity("Model.Entities.Team", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -165,7 +166,7 @@ namespace Persistence.Migrations
                     b.ToTable("Teams");
                 });
 
-            modelBuilder.Entity("BusinessEntities.User", b =>
+            modelBuilder.Entity("Model.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -181,7 +182,7 @@ namespace Persistence.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("BusinessEntities.WorkItem", b =>
+            modelBuilder.Entity("Model.Entities.WorkItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -230,26 +231,26 @@ namespace Persistence.Migrations
                     b.ToTable("WorkItems");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Backlog", b =>
+            modelBuilder.Entity("Model.Entities.Backlog", b =>
                 {
-                    b.HasOne("BusinessEntities.Team", "Team")
+                    b.HasOne("Model.Entities.Team", "Team")
                         .WithOne("Backlog")
-                        .HasForeignKey("BusinessEntities.Backlog", "Id")
+                        .HasForeignKey("Model.Entities.Backlog", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Position", b =>
+            modelBuilder.Entity("Model.Entities.Position", b =>
                 {
-                    b.HasOne("BusinessEntities.Person", "Person")
+                    b.HasOne("Model.Entities.Person", "Person")
                         .WithMany("Positions")
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BusinessEntities.Team", "Team")
+                    b.HasOne("Model.Entities.Team", "Team")
                         .WithMany("Positions")
                         .HasForeignKey("TeamId");
 
@@ -258,15 +259,15 @@ namespace Persistence.Migrations
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Relationship", b =>
+            modelBuilder.Entity("Model.Entities.Relationship", b =>
                 {
-                    b.HasOne("BusinessEntities.WorkItem", "MainItem")
+                    b.HasOne("Model.Entities.WorkItem", "MainItem")
                         .WithMany("RelationshipsSource")
                         .HasForeignKey("MainItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BusinessEntities.WorkItem", "RelatedItem")
+                    b.HasOne("Model.Entities.WorkItem", "RelatedItem")
                         .WithMany("RelationshipsDestination")
                         .HasForeignKey("RelatedItemId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -277,9 +278,9 @@ namespace Persistence.Migrations
                     b.Navigation("RelatedItem");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Sprint", b =>
+            modelBuilder.Entity("Model.Entities.Sprint", b =>
                 {
-                    b.HasOne("BusinessEntities.Team", "Team")
+                    b.HasOne("Model.Entities.Team", "Team")
                         .WithMany("Sprints")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -288,24 +289,24 @@ namespace Persistence.Migrations
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("BusinessEntities.User", b =>
+            modelBuilder.Entity("Model.Entities.User", b =>
                 {
-                    b.HasOne("BusinessEntities.Person", "Person")
+                    b.HasOne("Model.Entities.Person", "Person")
                         .WithOne("User")
-                        .HasForeignKey("BusinessEntities.User", "Id")
+                        .HasForeignKey("Model.Entities.User", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Person");
                 });
 
-            modelBuilder.Entity("BusinessEntities.WorkItem", b =>
+            modelBuilder.Entity("Model.Entities.WorkItem", b =>
                 {
-                    b.HasOne("BusinessEntities.Position", "Assignment")
+                    b.HasOne("Model.Entities.Position", "Assignment")
                         .WithMany("WorkItems")
                         .HasForeignKey("AssignmentId");
 
-                    b.HasOne("BusinessEntities.Backlog", "Backlog")
+                    b.HasOne("Model.Entities.Backlog", "Backlog")
                         .WithMany("WorkItems")
                         .HasForeignKey("BacklogId");
 
@@ -314,24 +315,24 @@ namespace Persistence.Migrations
                     b.Navigation("Backlog");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Backlog", b =>
+            modelBuilder.Entity("Model.Entities.Backlog", b =>
                 {
                     b.Navigation("WorkItems");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Person", b =>
+            modelBuilder.Entity("Model.Entities.Person", b =>
                 {
                     b.Navigation("Positions");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Position", b =>
+            modelBuilder.Entity("Model.Entities.Position", b =>
                 {
                     b.Navigation("WorkItems");
                 });
 
-            modelBuilder.Entity("BusinessEntities.Team", b =>
+            modelBuilder.Entity("Model.Entities.Team", b =>
                 {
                     b.Navigation("Backlog");
 
@@ -340,7 +341,7 @@ namespace Persistence.Migrations
                     b.Navigation("Sprints");
                 });
 
-            modelBuilder.Entity("BusinessEntities.WorkItem", b =>
+            modelBuilder.Entity("Model.Entities.WorkItem", b =>
                 {
                     b.Navigation("RelationshipsDestination");
 

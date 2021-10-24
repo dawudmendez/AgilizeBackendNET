@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Persistence.Migrations
+namespace Model.Migrations
 {
     public partial class Initial : Migration
     {

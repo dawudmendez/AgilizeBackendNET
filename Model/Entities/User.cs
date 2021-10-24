@@ -6,27 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessEntities
+namespace Model.Entities
 {
-    /// <summary>
-    /// Stores a person.
-    /// </summary>
-    public class Person
+    public class User
     {
+        [ForeignKey("Person")]
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(200)]
-        public string FullName { get; set; }
+        public Person Person { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string Email { get; set; }
-
-        public virtual ICollection<Position> Positions { get; set; }
-
-        public virtual User User { get; set; }
+        [MaxLength(50)]
+        public string Password { get; set; }
     }
 }

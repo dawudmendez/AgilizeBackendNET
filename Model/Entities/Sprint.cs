@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessEntities
+namespace Model.Entities
 {
     /// <summary>
     /// It's a period of time were work is produced.

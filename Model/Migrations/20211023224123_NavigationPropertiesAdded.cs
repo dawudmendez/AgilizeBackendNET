@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Persistence.Migrations
+namespace Model.Migrations
 {
     public partial class NavigationPropertiesAdded : Migration
     {
